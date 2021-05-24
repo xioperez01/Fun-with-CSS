@@ -14,31 +14,30 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 500px;
+	height: 450px;
 	margin: auto;
 	font-size: 30px;
 	font-weight: bold;
+	border: solid 2px grey;
+	border-radius: 15px;
+	padding-top: 20px;
+	background-color: #f7f7f7;
 }
 
 .i-html, .i-css, .i-js {
 	height: 400px;
 	width: 300px;
-	border: solid 2px grey;
 	border-radius: 15px;
-	margin-top: 20px;
 }
 
 .i-html {
-	left: 0;
 	background: url("./images/0-sprite.png") 0 0;
 }
 
 .i-css {
-	left: 300px;
-	background: url("./images/0-sprite.png") 290px 0;
+	background: url("./images/0-sprite.png") 580px 0;
 }
 
 .i-js {
-	left: 600px;
-	background: url("./images/0-sprite.png") 580px 0;
+	background: url("./images/0-sprite.png") 290px 0;
 }
