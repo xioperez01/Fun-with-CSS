@@ -1,0 +1,44 @@
+body {
+	height: 100vh;
+}
+
+ul {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style: none;
+}
+
+li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 500px;
+	margin: auto;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.i-html, .i-css, .i-js {
+	height: 400px;
+	width: 300px;
+	border: solid 2px grey;
+	border-radius: 15px;
+	margin-top: 20px;
+}
+
+.i-html {
+	left: 0;
+	background: url("./images/0-sprite.png") 0 0;
+}
+
+.i-css {
+	left: 300px;
+	background: url("./images/0-sprite.png") 290px 0;
+}
+
+.i-js {
+	left: 600px;
+	background: url("./images/0-sprite.png") 580px 0;
+}
