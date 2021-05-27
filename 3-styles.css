@@ -1,6 +1,160 @@
-body {
+/* Reset
+		============================== */
+
+html {
+	font-size: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Nav-bar
+		============================== */
+
+.menu {
+	position: absolute;
+	height: auto;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	height: 100vh;
+}
+
+/* Menu-open
+		============================== */
+
+.menu-open {
+	visibility: hidden;
+}
+
+.menu-open-button, .fa {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem;
+	background-color: #C93C38;
+	border: solid 1px #8d1c18;
+	border-radius: 50%;
+}
+
+.menu-open-button {
+	position: relative;
+	flex-direction: column;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+}
+
+/* Menu lines
+		============================== */
+
+.menu-line {
+	position: absolute;
+	height: 0.2rem;
+	width: 2rem;
+	background-color: #ffffff;
+}
+
+.menu-line-1 {
+	top: 40%;
+}
+
+.menu-line-2 {
+	top: 50%;
+}
+
+.menu-line-3 {
+	top: 60%;
+}
+
+/* Menu Items
+		============================== */
+
+.menu-item {
+	position: absolute;
+	top: calc(50% - 50px / 2);
+}
+
+.fa {
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	font-size: 2rem;
+	color: #ffffff;
+}
+
+.fa:hover{
+	background-color: #ffffff;
+	color: #C93C38;
+}
+
+/* Animations
+		============================== */
+
+
+/* Menu Open */
+.menu-open:checked + .menu-open-button {
+	animation: click;
+	animation-duration: 1.2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes click {
+  0% {
+    transform: scale(1.2);
+	}
+	50% {
+    transform: scale(1.2);
+	}
+	100% {
+    transform: scale(0.85);
+  }
+}
+
+.menu-open:checked + .menu-open-button ~ .menu-item {
+	position: relative;
+	visibility: visible;
+}
+
+.menu-open:not(:checked) + .menu-open-button {
+	animation: click-hidden;
+	animation-duration: 2s;
+}
+
+@keyframes click-hidden {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.menu-open:not(:checked) + .menu-open-button ~ .menu-item {
+	visibility: hidden;
+}
+
+/* Lines */
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+	transform: rotate(45deg);
+	top: 50%;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+  visibility: hidden;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+	transform: rotate(-45deg);
+	top: 50%;
 }
