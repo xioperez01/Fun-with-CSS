@@ -1,6 +1,12 @@
+/* Reset
+		============================== */
+
 body {
 	height: 100vh;
 }
+
+/* List
+		============================== */
 
 ul {
 	padding: 0;
@@ -23,6 +29,9 @@ li {
 	padding-top: 20px;
 	background-color: #f7f7f7;
 }
+
+/* Sprite
+		============================== */
 
 .i-html, .i-css, .i-js {
 	height: 400px;
